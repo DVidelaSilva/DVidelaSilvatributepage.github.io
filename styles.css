@@ -1,328 +1,366 @@
-body {
-    background-color: #141412;
-}
+/*--------------RESET--------------------*/
 
-#main {
-    background: white;
-    border: 10px solid #2FA71C;
-    border-radius: 5px;
-    margin: 5px 5px;
-    padding: 15px;
-}
-
-#title {
-
-    font-family: "Legrand";
-    src: url("fonts/Legrand.ttf");
-    font-size: 60px;
-    text-align: center;
-    
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
-#bajada_titulo {
+/*--------------HEADER--------------------*/
 
-    font-family: "Legrand";
-    src: url("fonts/Legrand.ttf");
+header {
+    height: 100px;
+    background: #515151;
+    padding: 0 50px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-transform: uppercase;
+    color:  rgb(59,157,239);
+    font-weight: 200;
+}
+
+.menu a{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.mostrar-menu, 
+.esconder-menu {
     font-size: 30px;
-    text-align: center;
-    
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
 }
 
-#img-div {
-    
-    display:block;
-    justify-content: center;
-    
+.mostrar-menu{
+    order: 1;
 }
 
-#image {
-
-    max-width: 25%;
-    display: block;
-    height: auto;
-    margin: 0 auto;
-    
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover {
+    color: rgb(59,157,239);
 }
 
-#libros_bn{
-    width: 150px;
-    height: 150px;
+#check{
+    display: none;
 }
 
-#tribute-info {
+/*--------------BANNER--------------------*/
 
-    font-family: "Baskervville-Regular";
-    src: url("fonts/Baskervville-Regular.ttf");
-    font-size: 20px;
-    text-align: justify;
-    padding: 10px;
+#banner {
+    padding: 0 50px;
+    background-image: url("/img/banner2.jpg");
+    height: 45vh;
+    background-size: cover;
+    background-position: center;
 }
 
-#bibliografia {
 
-    font-family: "Legrand";
-    src: url("fonts/Legrand.ttf");
-    font-size: 50px;
-    text-align: justify;
-    padding: 10px;
-    text-align: center;
-
-   
+#banner::before {
+    content: "";
+    background: rgba(77, 77, 92, 0.85);
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    left: 0;
 }
 
-#contenedores_bibliografia {
+.contenido-banner {
+    position: relative;
+    color: white;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    margin: 5px;
-
- 
+    justify-content: center;
 }
 
-#contenedor_libro1 {
-    display: flex;
-    justify-content: space-around;
-    border: 8px solid #141412;
-    border-radius: 15px;
-    margin-bottom: 5px;
-
-
-}
-#contenedor_libro2 {
-    display: flex;
-    justify-content: space-around;
-    border: 8px solid #141412;
-    border-radius: 15px;
-    padding-bottom: -150px;
-    margin-bottom: 5px;
-
-}
-
-#contenedor_libro3 {
-    display: flex;
-    justify-content: space-around;
-    border: 8px solid #141412;
-    border-radius: 15px;
-    padding-bottom: -150px;
-    margin-bottom: 5px;
-
-}
-
-#contenedor_libro4 {
-    display: flex;
-    justify-content: space-around;
-    border: 8px solid #141412;
-    border-radius: 15px;
-    padding-bottom: -150px;
-    margin-bottom: 5px;
-
-}
-
-#contenedor_libro5 {
-    display: flex;
-    justify-content: space-around;
-    border: 8px solid #141412;
-    border-radius: 15px;
-    padding-bottom: -150px;
-    margin-bottom: 5px;
-
-}
-
-#libro {
-
-    max-width: 200px;
-    padding: 5px;
-    padding-left: 50px;
- 
-}
-
-
-#titulo_libro {
-    font-family: "Baskervville-Regular";
-    src: url("fonts/Baskervville-Regular.ttf");
+.contenido-banner h3{
     font-size: 30px;
-    font-weight: bolder;
-}
-
-
-#descripcion {
-
-    font-family: "Baskervville-Regular";
-    src: url("fonts/Baskervville-Regular.ttf");
-    font-size: 20px;
-    width: 300px;
+    font-weight: 400;
+    padding: 10px 0px;
 
 }
 
-ul {
-    
-    max-width: 550px;
-    margin: 0 auto 20px auto;
-    text-align: left;
-    line-height: 1.6;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-  
-  li {
+.contenido-banner h3 span{
+    font-weight: 600;;
+}
 
-    margin: 5px -15px;
-  }
+.boton-empezar {
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgb(59,157,239);
+    padding: 20px 40px;
+    align-self: baseline;
+    transition: all 0.4s;
+}
 
-
-
-#reseña {
-    width: 450px;
-    height: 300px;
-    
-    font-family: "Baskervville-Regular";
-    src: url("fonts/Baskervville-Regular.ttf");
-    font-size: 20px;
-    text-align: justify;
-    margin: 0;
+.boton-empezar:hover {
+    background: rgb(59,157,239, 0.5) ;
 }
 
 
-blockquote {
-    font-family: "Baskervville-Regular";
-    src: url("fonts/Baskervville-Regular.ttf");
-    font-size: 20px;
-    font-style: italic;
+/*--------------PERSONAS--------------------*/
+
+#personas {
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
     text-align: center;
 }
+
+#personas img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+#personas div {
+    padding: 30px 30px;
+}
+
+#personas div h4{
+    color: #515151;
+    font-size: 20px;
+    margin: 15px 0px;
+}
+
+#personas div p{
+    color: #4d4d5c87;
+    font-size: 18px;
+}
+
+.boton-saber-mas {
+    display: inline-block;
+    text-decoration: none;
+    color:rgb(59,157,239);
+    padding: 10px 30px;
+    border: 3px solid rgb(59,157,239);
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: all 0.4s;
+}
+
+.boton-saber-mas:hover {
+    background: rgb(59,157,239);
+    color: white;
+}
+
+/*--------------ICONOS--------------------*/
+
+.contenido-iconos div i {
+    font-size: 40px;
+    color: rgb(59,157,239);
+}
+
+
+#iconos {
+    padding: 0px 50px;
+    background: rgba(77, 77, 92, 0.85);
+}
+
+.contenido-iconos {
+    padding: 50px 50px 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.contenido-iconos div{
+    flex: 1;
+    margin: 20px 0px;
+    border-right: 2px solid rgba(255,255,255,0.2);
+}
+
+#icono-mobile {
+    border: none;
+}
+
+.contenido-iconos div h6{
+    color: white;
+    font-size: 20px;
+    font-weight: 100;
+    margin: 10px 0px;
+}
+
+.contenido-iconos div p{
+    color: rgba(255,255,255,0.55);
+    font-size: 15px;
+}
+
+.boton-iconos {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+
+/*--------------FORMULARIO--------------------*/
+
+#contacto {
+    background: rgb(59,157,239);
+    padding: 50px 0px;
+    color: white;
+}
+
+#contacto h4{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+#contacto form{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.datos-form {
+    display: flex;
+}
+
+.datos-form div {
+    padding: 10px;
+    flex: 1;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+    background: rgb(59,157,239);
+    border-radius: 10px;
+    border: 2px solid rgb(59,200,239);
+    padding: 10px 5px;
+    outline: 0;
+    color: white;
+    width: 100%;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: rgb(59,255,239);
+    box-shadow: 0 0 0 1px rgb(59,255,239);
+}
+
+
+form input::placeholder,
+form textarea::placeholder {
+    color: white;
+}
+
+.mensaje {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+
+.boton-formulario .boton-saber-mas {
+    display: block;
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+    transition: 0.4s;
+    padding-right: 0; 
+    padding-left: 0;  
+    width: 90%;
+    margin-left: 60px;
+}
+
+
+.boton-formulario .boton-saber-mas:hover {
+    background: rgb(59,200,239)
+}
+
+
+/*--------------FOOTER--------------------*/
 
 footer {
-    font-family: "Baskervville-Regular";
-    src: url("fonts/Baskervville-Regular.ttf");
-    font-size: 15px;
-
+    background: #515151;
+    color: white;
     text-align: center;
+    padding: 10px 0px;
 }
 
 
-#tentaculos {
-    display: flex;
-    justify-content: space-around;
-    width: 200px;
-    height: 200px;
-    margin: -20px;
-}
 
-@media all and (max-width: 600px) {
+/*--------------RESPONSIVE--------------------*/
 
 
+@media (max-width: 768px) {
 
-    #main {
-        margin: 0;
-      }
+/*--------HEADER--------*/
 
-    #image {
-
-        max-width: 100%;
+    .mostrar-menu,
+    .esconder-menu {
         display: block;
-        height: auto;
-        margin: 0 auto;
-        
-        
     }
 
-    #libros_bn {
-
-        max-width: 100%;
-        display: block;
-        height: auto;
-        margin: 0 auto;
-        
-        
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #515151;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
     }
 
-    #tentaculos {
-
-        max-width: 100%;
+    .menu a {
         display: block;
-        height: auto;
-  
-        margin: -20px;
-        
-        
+        padding: 20px;
+
     }
 
+    .esconder-menu {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
 
+    #check:checked ~ .menu {
+        right: 0;
+    }
 
-    #contenedor_libro1 {
-        display: flex;
-        justify-content: center;
+    /*--------PERSONAS--------*/
+
+    #personas {
         flex-direction: column;
-        margin: -15px;
-        margin-bottom: 20px;
-        
     }
-    #contenedor_libro2 {
-        display: flex;
-        justify-content: center;
+
+    /*--------ICONOS--------*/
+
+    .contenido-iconos {
         flex-direction: column;
-        margin: -15px;
-        margin-bottom: 20px;
-        
     }
-    #contenedor_libro3 {
-        display: flex;
-        justify-content: center;
+
+    .contenido-iconos div{
+        border: none;
+    }
+
+    /*--------FORMULARIO--------*/
+
+    .datos-form {
         flex-direction: column;
-        margin: -15px;
-        margin-bottom: 20px;
-        
-    }
-    #contenedor_libro4 {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        margin: -15px;
-        margin-bottom: 20px;
-    }
-    #contenedor_libro5 {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        margin: -15px;
-        margin-bottom: 20px;
-        
-    }
-    #libro {
-
-        max-width: 50%;
-        display: block;
-        width: auto;
-        height: auto;
-        border: 100px;  
-
-     
     }
 
-    #bibliografia {
-        
-       font-size: 30px;
-       line-height: 1.2;
-
- 
-    }
-
-
-    #descripcion {
-        text-align: justify;
-        max-width: 100%;
-        display: block;
-        height: auto;
-        margin: 0 auto;
-    }
-
-    #reseña {     
-        text-align: justify;
-        max-width: 100%;
-        display: block;
-        height: auto;
-        margin: auto;
-        border: 5px;
+    .boton-formulario .boton-saber-mas {
+        width: 70%;
+        margin-left: 45px;
     }
 }
 
